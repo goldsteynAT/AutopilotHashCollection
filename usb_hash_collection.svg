@@ -1,0 +1,143 @@
+<svg width="1100" height="720" viewBox="0 0 1100 720" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow-black" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="1" dy="1" stdDeviation="1.5" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="720" fill="#ffffff"/>
+
+  <text x="550" y="35" font-size="24" font-weight="900" fill="#212529" text-anchor="middle" letter-spacing="1">MICROSOFT AUTOPILOT — USB HASH COLLECTION</text>
+  <line x1="20" y1="55" x2="1080" y2="55" stroke="#edebe9" stroke-width="1"/>
+
+  <g transform="translate(0, 70)">
+    
+    <rect x="20" y="45" width="300" height="370" rx="12" fill="#f3f2f1" stroke="#edebe9" stroke-width="1"/>
+    <text x="170" y="28" font-size="15" font-weight="800" fill="#212529" text-anchor="middle" letter-spacing="0.5">1. USB HASH COLLECTION</text>
+    <text x="170" y="62" font-size="10" fill="#495057" text-anchor="middle">Capturing unique hardware IDs offline</text>
+    <text x="170" y="76" font-size="10" fill="#495057" text-anchor="middle">via PowerShell at the OOBE screen</text>
+
+    <g filter="url(#shadow)">
+      <rect x="45" y="100" width="250" height="42" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+      <text x="170" y="118" font-size="12" font-weight="600" fill="#2C2C2A" text-anchor="middle">Prepare USB Stick</text>
+      <text x="170" y="132" font-size="9" fill="#5F5E5A" text-anchor="middle">CH.ps1 - UH.ps1 - AutopilotInfo</text>
+    </g>
+
+    <line x1="170" y1="142" x2="170" y2="165" stroke="#000000" stroke-width="1.3" marker-end="url(#arrow-black)"/>
+
+    <g filter="url(#shadow)">
+      <rect x="45" y="165" width="250" height="38" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+      <text x="170" y="189" font-size="12" font-weight="600" fill="#26215C" text-anchor="middle">Power on - OOBE Screen</text>
+    </g>
+
+    <line x1="170" y1="203" x2="170" y2="225" stroke="#000000" stroke-width="1.3" marker-end="url(#arrow-black)"/>
+
+    <g filter="url(#shadow)">
+      <rect x="45" y="225" width="250" height="42" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+      <text x="170" y="243" font-size="12" font-weight="600" fill="#26215C" text-anchor="middle">Shift + F10 (CMD)</text>
+      <text x="170" y="257" font-size="9" fill="#534AB7" text-anchor="middle">Run D:\CH.bat from USB</text>
+    </g>
+
+    <line x1="170" y1="267" x2="170" y2="290" stroke="#000000" stroke-width="1.3" marker-end="url(#arrow-black)"/>
+
+    <g filter="url(#shadow)">
+      <rect x="45" y="290" width="250" height="42" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+      <text x="170" y="308" font-size="12" font-weight="600" fill="#26215C" text-anchor="middle">Hash Exported</text>
+      <text x="170" y="322" font-size="9" fill="#534AB7" text-anchor="middle">Saved as CSV to \Hashes</text>
+    </g>
+
+    <path d="M45 311 L30 311 L30 184 L43 184" fill="none" stroke="#000000" stroke-width="1.2" stroke-dasharray="3 2" marker-end="url(#arrow-black)"/>
+
+    <rect x="340" y="45" width="420" height="485" rx="12" fill="#f3f2f1" stroke="#edebe9" stroke-width="1"/>
+    <text x="550" y="28" font-size="15" font-weight="800" fill="#212529" text-anchor="middle" letter-spacing="0.5">2. PROCESSING</text>
+    <text x="550" y="62" font-size="10" fill="#495057" text-anchor="middle">Consolidating individual hash files into a master import CSV</text>
+    <text x="550" y="76" font-size="10" fill="#495057" text-anchor="middle">Automating tagging, labeling, and file archiving</text>
+
+    <path d="M295 311 L330 311 L330 121 L338 121" fill="none" stroke="#000000" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrow-black)"/>
+
+    <g filter="url(#shadow)">
+      <rect x="380" y="100" width="340" height="42" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+      <text x="550" y="118" font-size="12" font-weight="600" fill="#04342C" text-anchor="middle">Plug USB into Admin Laptop</text>
+      <text x="550" y="132" font-size="9" fill="#0F6E56" text-anchor="middle">Execute Start_Upload.bat</text>
+    </g>
+
+    <line x1="550" y1="142" x2="550" y2="165" stroke="#000000" stroke-width="1.3" marker-end="url(#arrow-black)"/>
+
+    <g filter="url(#shadow)">
+      <rect x="380" y="165" width="340" height="42" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+      <text x="550" y="183" font-size="12" font-weight="600" fill="#04342C" text-anchor="middle">UH.ps1 runs</text>
+      <text x="550" y="197" font-size="9" fill="#0F6E56" text-anchor="middle">Reads and validates collected CSV files</text>
+    </g>
+
+    <line x1="550" y1="207" x2="550" y2="230" stroke="#000000" stroke-width="1.3" marker-end="url(#arrow-black)"/>
+
+    <rect x="380" y="230" width="340" height="110" rx="8" fill="#fffcf5" stroke="#EF9F27" stroke-width="1" stroke-dasharray="4 2"/>
+    <text x="550" y="243" font-size="9" font-weight="bold" fill="#854F0B" text-anchor="middle">OPTIONAL STEPS</text>
+
+    <g filter="url(#shadow)">
+      <rect x="477" y="255" width="145" height="70" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+      <text x="549.5" y="272" font-size="11" font-weight="bold" fill="#412402" text-anchor="middle">Group Tags</text>
+      <text x="549.5" y="290" font-size="9" fill="#854F0B" text-anchor="middle">Needed to assign OU</text>
+      <text x="549.5" y="303" font-size="9" fill="#854F0B" text-anchor="middle">via GroupTags.csv</text>
+    </g>
+
+    <line x1="550" y1="340" x2="550" y2="365" stroke="#000000" stroke-width="1.3" marker-end="url(#arrow-black)"/>
+
+    <g filter="url(#shadow)">
+      <rect x="380" y="365" width="340" height="42" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+      <text x="550" y="383" font-size="12" font-weight="600" fill="#04342C" text-anchor="middle">Merge CSV Files</text>
+      <text x="550" y="397" font-size="9" fill="#0F6E56" text-anchor="middle">Generated: Autopilot_Import.csv</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="380" y="435" width="340" height="35" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+      <text x="550" y="457" font-size="10" fill="#2C2C2A" text-anchor="middle">Archive originals to \Hashes_Old</text>
+    </g>
+    <path d="M550 407 L550 433" fill="none" stroke="#000000" stroke-width="1.1" stroke-dasharray="3 2" marker-end="url(#arrow-black)"/>
+
+    <rect x="780" y="45" width="300" height="310" rx="12" fill="#f3f2f1" stroke="#edebe9" stroke-width="1"/>
+    <text x="930" y="28" font-size="15" font-weight="800" fill="#212529" text-anchor="middle" letter-spacing="0.5">3. INTUNE UPLOAD</text>
+    <text x="930" y="62" font-size="10" fill="#495057" text-anchor="middle">Onboarding devices to the Intune tenant</text>
+    <text x="930" y="76" font-size="10" fill="#495057" text-anchor="middle">to enable cloud-based deployment</text>
+
+    <path d="M720 386 L770 386 L770 121 L778 121" fill="none" stroke="#000000" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrow-black)"/>
+
+    <g filter="url(#shadow)">
+      <rect x="805" y="100" width="250" height="42" rx="6" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+      <text x="930" y="118" font-size="12" font-weight="600" fill="#4A1B0C" text-anchor="middle">Browser: EdgeInPrivate</text>
+      <text x="930" y="132" font-size="9" fill="#993C1D" text-anchor="middle">Opens Autopilot Import Page</text>
+    </g>
+
+    <line x1="930" y1="142" x2="930" y2="165" stroke="#000000" stroke-width="1.3" marker-end="url(#arrow-black)"/>
+
+    <g filter="url(#shadow)">
+      <rect x="805" y="165" width="250" height="42" rx="6" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+      <text x="930" y="183" font-size="12" font-weight="600" fill="#4A1B0C" text-anchor="middle">Path in Clipboard</text>
+      <text x="930" y="197" font-size="9" fill="#993C1D" text-anchor="middle">Paste via Ctrl+V in File Picker</text>
+    </g>
+
+    <line x1="930" y1="207" x2="930" y2="230" stroke="#000000" stroke-width="1.3" marker-end="url(#arrow-black)"/>
+
+    <g filter="url(#shadow)">
+      <rect x="805" y="230" width="250" height="42" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+      <text x="930" y="248" font-size="12" font-weight="600" fill="#173404" text-anchor="middle">Confirm Import</text>
+      <text x="930" y="262" font-size="9" fill="#3B6D11" text-anchor="middle">Ready after 15-20min sync</text>
+    </g>
+
+    <g transform="translate(320, 580)">
+      <rect x="0" y="0" width="10" height="10" rx="2" fill="#f3f2f1" stroke="#adb5bd" stroke-width="0.5"/>
+      <text x="18" y="9" font-size="10" fill="#6c757d">Phase Background</text>
+      <rect x="130" y="0" width="10" height="10" rx="2" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+      <text x="148" y="9" font-size="10" fill="#6c757d">Client Step</text>
+      <rect x="230" y="0" width="10" height="10" rx="2" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+      <text x="248" y="9" font-size="10" fill="#6c757d">Process Step</text>
+      <rect x="330" y="0" width="10" height="10" rx="2" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+      <text x="348" y="9" font-size="10" fill="#6c757d">Optional</text>
+      <rect x="420" y="0" width="10" height="10" rx="2" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+      <text x="438" y="9" font-size="10" fill="#6c757d">Cloud Step</text>
+    </g>
+  </g>
+</svg>
